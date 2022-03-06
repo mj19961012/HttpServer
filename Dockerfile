@@ -7,7 +7,7 @@ COPY ./ /httpserver
 RUN GOOS=linux go build -installsuffix cgo -o httpserver main.go
 
 
-FROM busybox
+FROM scratch
 ENV ENV local
 EXPOSE 8090
 COPY --from=build /httpserver /
