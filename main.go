@@ -25,7 +25,6 @@ func RootPath(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	w.Header().Set("Server Version", os.Getenv("VERSION"))
-
 	retcode := 200
 	w.WriteHeader(retcode)
 	fmt.Println("Client IP:", r.Host)
